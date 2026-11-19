@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: CrediMark Badges for WooCommerce
- * Plugin URI: https://github.com/mhkxx2/credimark-badges-for-woocommerce
+ * Plugin URI: https://karazshop.ae/
  * Description: Show conversion-focused product trust badges (warranty, free delivery, easy returns, COD) and optional review widgets below the product gallery on WooCommerce single product pages.
  * Version: 1.0.0
  * Author: ShopForge Labs
- * Author URI: https://github.com/mhkxx2
+ * Author URI: https://mudassar.net/
  * Text Domain: credimark-badges-for-woocommerce
  * Domain Path: /languages
  * Requires at least: 5.8

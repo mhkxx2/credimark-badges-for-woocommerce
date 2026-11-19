@@ -49,6 +49,13 @@ Unlike generic icon widgets, CrediMark is built for WooCommerce single product p
 * Shortcode: `[credimark_badges]`
 * Clean singleton architecture, no bloat
 
+
+= Links =
+
+* Live website: https://karazshop.ae/
+* Developer website: https://mudassar.net/
+* Plugin URI: https://github.com/mhkxx2/credimark-badges-for-woocommerce
+
 == Installation ==
 
 1. Upload the `credimark-badges-for-woocommerce` folder to `/wp-content/plugins/`

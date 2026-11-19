@@ -1,0 +1,249 @@
+/**
+ * CrediMark Badges for WooCommerce Styling
+ * Clean, modern, responsive trust badges below product images.
+ */
+
+:root {
+	--credimark-tb-primary: var(--wd-primary-color, #c1121f);
+	--credimark-tb-title-color: #222222;
+	--credimark-tb-text-muted: #767676;
+	--credimark-tb-border: #f0f0f0;
+	--credimark-tb-bg: #fafafa;
+	--credimark-tb-tp-green: #00b67a;
+}
+
+.credimark-product-trust-section {
+	margin: 20px 0 16px 0;
+	padding: 16px 14px;
+	background: var(--credimark-tb-bg);
+	border: 1px solid var(--credimark-tb-border);
+	border-radius: 10px;
+	box-sizing: border-box;
+	clear: both;
+	position: relative;
+	transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.credimark-product-trust-section:hover {
+	border-color: #e5e5e5;
+	box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+}
+
+/* ==========================================================================
+   Row 1: Trustpilot Rating Bar (Optional / Configurable)
+   ========================================================================== */
+
+.credimark-review-row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 12px;
+	margin-bottom: 14px;
+	border-bottom: 1px solid var(--credimark-tb-border);
+	text-align: center;
+}
+
+.credimark-tp-link {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	flex-wrap: wrap;
+	text-decoration: none !important;
+	color: var(--credimark-tb-title-color) !important;
+	font-family: var(--wd-font-body, "Open Sans", sans-serif);
+	font-size: 13px;
+	font-weight: 500;
+	transition: opacity 0.2s ease;
+}
+
+.credimark-tp-link:hover {
+	opacity: 0.85;
+}
+
+.credimark-tp-text {
+	font-weight: 600;
+	color: #2b2b2b;
+}
+
+.credimark-tp-stars {
+	color: var(--credimark-tb-tp-green);
+	font-size: 15px;
+	letter-spacing: 2px;
+	line-height: 1;
+}
+
+.credimark-tp-brand {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	font-weight: 700;
+	color: #1c1c1c;
+}
+
+.credimark-tp-logo-star {
+	flex-shrink: 0;
+}
+
+/* ==========================================================================
+   Row 2: Four Badges Grid
+   ========================================================================== */
+
+.credimark-trust-badges-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 12px;
+	align-items: flex-start;
+}
+
+.credimark-trust-badge-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 4px 6px;
+	box-sizing: border-box;
+	transition: transform 0.2s ease;
+}
+
+.credimark-trust-badge-icon-wrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 42px;
+	height: 42px;
+	margin-bottom: 8px;
+	color: #2b2b2b;
+	transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.credimark-trust-badge-item:hover .credimark-trust-badge-icon-wrap {
+	color: var(--credimark-tb-primary);
+	transform: translateY(-2px) scale(1.06);
+}
+
+.credimark-trust-svg {
+	display: block;
+	width: 28px;
+	height: 28px;
+	stroke-width: 1.8px;
+}
+
+.credimark-trust-badge-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+
+.credimark-trust-badge-title {
+	font-family: var(--wd-font-heading, "Lexend Deca", sans-serif);
+	font-size: 12px;
+	font-weight: 700;
+	color: var(--credimark-tb-title-color);
+	line-height: 1.25;
+	text-transform: uppercase;
+	letter-spacing: 0.3px;
+	margin: 0 0 3px 0;
+}
+
+.credimark-trust-badge-subtitle {
+	font-family: var(--wd-font-body, "Open Sans", sans-serif);
+	font-size: 11px;
+	font-weight: 400;
+	color: var(--credimark-tb-text-muted);
+	line-height: 1.3;
+	margin: 0;
+	white-space: normal;
+	word-break: break-word;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
+/* Tablet (768px down to 576px) */
+@media (max-width: 768px) {
+	.credimark-product-trust-section {
+		margin: 16px 0 14px 0;
+		padding: 14px 10px;
+	}
+
+	.credimark-trust-badges-grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 14px 10px;
+	}
+
+	.credimark-trust-badge-item {
+		padding: 2px 4px;
+	}
+
+	.credimark-trust-badge-icon-wrap {
+		width: 38px;
+		height: 38px;
+		margin-bottom: 6px;
+	}
+
+	.credimark-trust-svg {
+		width: 26px;
+		height: 26px;
+	}
+
+	.credimark-trust-badge-title {
+		font-size: 11.5px;
+	}
+
+	.credimark-trust-badge-subtitle {
+		font-size: 10.5px;
+	}
+}
+
+/* Mobile (575px and below) */
+@media (max-width: 575px) {
+	.credimark-product-trust-section {
+		margin: 14px 0 12px 0;
+		padding: 12px 8px;
+		border-radius: 8px;
+	}
+
+	.credimark-review-row {
+		padding-bottom: 10px;
+		margin-bottom: 10px;
+	}
+
+	.credimark-tp-link {
+		font-size: 11.5px;
+		gap: 5px;
+	}
+
+	.credimark-tp-stars {
+		font-size: 13px;
+		letter-spacing: 1px;
+	}
+
+	.credimark-trust-badges-grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 12px 6px;
+	}
+
+	.credimark-trust-badge-icon-wrap {
+		width: 34px;
+		height: 34px;
+		margin-bottom: 4px;
+	}
+
+	.credimark-trust-svg {
+		width: 24px;
+		height: 24px;
+	}
+
+	.credimark-trust-badge-title {
+		font-size: 11px;
+		letter-spacing: 0.2px;
+	}
+
+	.credimark-trust-badge-subtitle {
+		font-size: 10px;
+		line-height: 1.25;
+	}
+}
